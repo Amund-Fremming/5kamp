@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/5kamp/static/css/main.6c07c870.css",
+    "main.css": "/5kamp/static/css/main.f8cae553.css",
     "main.js": "/5kamp/static/js/main.cb27b93a.js",
     "static/js/453.ab50adfe.chunk.js": "/5kamp/static/js/453.ab50adfe.chunk.js",
     "static/media/haffe.png": "/5kamp/static/media/haffe.d4f32cc5a3d43e1ac9ed.png",
     "static/media/theo.png": "/5kamp/static/media/theo.7e6bec4ac10bd29b20aa.png",
     "index.html": "/5kamp/index.html",
-    "main.6c07c870.css.map": "/5kamp/static/css/main.6c07c870.css.map",
+    "main.f8cae553.css.map": "/5kamp/static/css/main.f8cae553.css.map",
     "main.cb27b93a.js.map": "/5kamp/static/js/main.cb27b93a.js.map",
     "453.ab50adfe.chunk.js.map": "/5kamp/static/js/453.ab50adfe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c07c870.css",
+    "static/css/main.f8cae553.css",
     "static/js/main.cb27b93a.js"
   ]
 }
