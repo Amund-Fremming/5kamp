@@ -5,22 +5,22 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 11px;
     padding-top: 5vh;
     height: 100vh;
 }
 
 .header {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
     font-family: monospace;
     color: brown;
 }
 
 .round-label {
-    font-size: 25px;
+    font-size: 34px;
     color: brown;
-    font-weight: 600;
+    font-weight: 900;
     font-family: monospace;
 }
 
@@ -33,28 +33,32 @@
 }
 
 .error {
-    font-size: 18px;
+    font-size: 22px;
     color: green;
     font-weight: 700;
     font-family: monospace;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
 }
 
 .round-buttons {
     display: flex;
     flex-direction: row;
-    gap: 5px
+    gap: 6.5px;
+    padding-left: 8px;
 }
 
 .round-button {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 440px;
     border: none;
     background-color:beige;
     font-family: monospace;
     color: brown;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,30 +84,38 @@
 .add-button {
     border:none;
     margin-top: 20px;
-    width: 230px;
-    height: 40px;
-    border-radius: 10px;
+    width: 80vw;
+    height: 60px;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     display: flex;
     background-color: brown;
     color: wheat;
     font-family: monospace;
-    font-size: 19px;
-    font-weight: 700;
+    font-size: 27px;
+    font-weight: 800;
 }
 
 .start-button {
     border:none;
-    width: 180px;
-    height: 40px;
-    border-radius: 10px;
+    width: 80vw;
+    height: 60px;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     display: flex;
     background-color: brown;
     color: wheat;
     font-family: monospace;
-    font-size: 19px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.abs-buttons {
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

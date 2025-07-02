@@ -12,8 +12,8 @@
     border-top: none;
     border-bottom: 2px solid black;
     font-family: monospace;
-    font-size: 20px;
-    width: 180px;
+    font-size: 26px;
+    width: 70vw;
 }
 
 .playerinfo__button {
@@ -22,9 +22,9 @@
     height: 30px;
     border: none;
     font-family: monospace;
-    color: brown;
+    color: black;
     font-weight: 900;
-    font-size: 23px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

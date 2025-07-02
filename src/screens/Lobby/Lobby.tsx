@@ -19,7 +19,7 @@ const Lobby = () => {
     );
 
     if (filteredPlayers.length < 2) {
-      setError("Du må ha minst 2 spillere");
+      setError("Du må ha minst 2 spillere med navn");
       return;
     }
 
@@ -40,6 +40,11 @@ const Lobby = () => {
   };
 
   const handleAddPlayer = () => {
+    if (players.length === 7) {
+      setError("Kan ikke ha flere enn 7 spillere");
+      return;
+    }
+
     setError("");
     const newPlayer: Player = {
       name: "",
@@ -101,12 +106,14 @@ const Lobby = () => {
           />
         ))}
       </div>
-      <button className="add-button" onClick={handleAddPlayer}>
-        Legg til spiller
-      </button>
-      <button className="start-button" onClick={handleStartGame}>
-        Start
-      </button>
+      <div className="abs-buttons">
+        <button className="add-button" onClick={handleAddPlayer}>
+          Legg til spiller
+        </button>
+        <button className="start-button" onClick={handleStartGame}>
+          Start
+        </button>
+      </div>
     </div>
   );
 };

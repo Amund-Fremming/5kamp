@@ -96,7 +96,7 @@ export const Game = () => {
         />
       ))}
 
-      <div className="game__button-wrapper">
+      <div className="abs-buttons">
         {game.roundNumber < game.numberOfRounds - 1 && (
           <ActionButton onClick={handleNext} text="Neste" />
         )}

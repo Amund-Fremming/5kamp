@@ -3,13 +3,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 78vw;
 }
 
 .playerscore__p {
     font-size: medium;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 26px;
     font-family: monospace;
 }
 
@@ -22,15 +22,15 @@
 }
 
 .playerscore__button {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border-radius: 440px;
     border: none;
     background-color: beige;
     font-family: monospace;
     color: brown;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
