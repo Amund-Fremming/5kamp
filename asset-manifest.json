@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/5kamp/static/css/main.7f6f6e68.css",
-    "main.js": "/5kamp/static/js/main.82faa4d0.js",
+    "main.css": "/5kamp/static/css/main.150f3e93.css",
+    "main.js": "/5kamp/static/js/main.ba1b67a0.js",
     "static/js/453.ab50adfe.chunk.js": "/5kamp/static/js/453.ab50adfe.chunk.js",
     "static/media/haffe.png": "/5kamp/static/media/haffe.d4f32cc5a3d43e1ac9ed.png",
     "static/media/theo.png": "/5kamp/static/media/theo.7e6bec4ac10bd29b20aa.png",
     "index.html": "/5kamp/index.html",
-    "main.7f6f6e68.css.map": "/5kamp/static/css/main.7f6f6e68.css.map",
-    "main.82faa4d0.js.map": "/5kamp/static/js/main.82faa4d0.js.map",
+    "main.150f3e93.css.map": "/5kamp/static/css/main.150f3e93.css.map",
+    "main.ba1b67a0.js.map": "/5kamp/static/js/main.ba1b67a0.js.map",
     "453.ab50adfe.chunk.js.map": "/5kamp/static/js/453.ab50adfe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f6f6e68.css",
-    "static/js/main.82faa4d0.js"
+    "static/css/main.150f3e93.css",
+    "static/js/main.ba1b67a0.js"
   ]
 }
