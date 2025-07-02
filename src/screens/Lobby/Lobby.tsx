@@ -76,7 +76,7 @@ const Lobby = () => {
         <img className="image" src={haffeImage} alt="haffe" />
         <img className="image" src={theoImage} alt="theo" />
       </div>
-      <h1 className="header">5kamp logger</h1>
+      <h1 className="header">5kamp log</h1>
       <p className="error">{error}</p>
       <div className="round-wrapper">
         <label className="round-label">{numRounds} Runder</label>
