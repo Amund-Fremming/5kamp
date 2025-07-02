@@ -57,11 +57,13 @@ const ScoreBoard = () => {
 
       <div className="space" />
 
-      <ActionButton onClick={handleLobbyPressed} text="Lobby" />
-      <ActionButton
-        onClick={() => setScreen(Screen.Game)}
-        text="Rediger spill"
-      />
+      <div className="abs-buttons">
+        <ActionButton onClick={handleLobbyPressed} text="Lobby" />
+        <ActionButton
+          onClick={() => setScreen(Screen.Game)}
+          text="Rediger spill"
+        />
+      </div>
     </div>
   );
 };
