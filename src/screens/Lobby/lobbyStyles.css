@@ -2,7 +2,7 @@
     background-color: wheat;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 11px;
