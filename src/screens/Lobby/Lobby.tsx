@@ -3,6 +3,8 @@ import { useGameProvider } from "../../context/GameContext";
 import { Player, Round, Screen } from "../../context/types";
 import "./lobbyStyles.css";
 import PlayerInfo from "../../components/PlayerInfo/PlayerInfo";
+import haffeImage from "../../assets/haffe.png";
+import theoImage from "../../assets/theo.png";
 
 const Lobby = () => {
   const [numRounds, setNumRounds] = useState<number>(5);
@@ -12,10 +14,19 @@ const Lobby = () => {
   const { game, setGame, setScreen } = useGameProvider();
 
   const handleStartGame = () => {
+    const filteredPlayers = players.filter(
+      (player) => player.name !== undefined && player.name !== ""
+    );
+
+    if (filteredPlayers.length < 2) {
+      setError("Du må ha minst 2 spillere");
+      return;
+    }
+
     const rounds: Round[] = [];
-    for (var i = 0; i < game.numberOfRounds; i++) {
+    for (var i = 0; i < numRounds; i++) {
       const round: Round = {
-        players: players,
+        players: filteredPlayers,
       };
       rounds.push(round);
     }
@@ -29,6 +40,7 @@ const Lobby = () => {
   };
 
   const handleAddPlayer = () => {
+    setError("");
     const newPlayer: Player = {
       name: "",
       score: 0,
@@ -55,17 +67,23 @@ const Lobby = () => {
 
   return (
     <div className="container">
-      <h1>5-Kamp logger</h1>
-      <p>{error}</p>
-      <div className="rounds-wrapper">
-        <label>Antall runder: {numRounds}</label>
-        <div className="ronuds">
+      <div className="image-wrapper">
+        <img className="image" src={haffeImage} alt="haffe" />
+        <img className="image" src={theoImage} alt="theo" />
+      </div>
+      <h1 className="header">5kamp logger</h1>
+      <p className="error">{error}</p>
+      <div className="round-wrapper">
+        <label className="round-label">{numRounds} Runder</label>
+        <div className="round-buttons">
           <button
+            className="round-button"
             onClick={() => setNumRounds((prev) => (prev === 0 ? 0 : prev - 1))}
           >
             -
           </button>
           <button
+            className="round-button"
             onClick={() =>
               setNumRounds((prev) => (prev === 20 ? 20 : prev + 1))
             }
@@ -83,12 +101,12 @@ const Lobby = () => {
           />
         ))}
       </div>
-      <div className="add-players">
-        <button onClick={handleAddPlayer}>Legg til spiller</button>
-      </div>
-      <div className="button-wrapper">
-        <button onClick={handleStartGame}>Start</button>
-      </div>
+      <button className="add-button" onClick={handleAddPlayer}>
+        Legg til spiller
+      </button>
+      <button className="start-button" onClick={handleStartGame}>
+        Start
+      </button>
     </div>
   );
 };

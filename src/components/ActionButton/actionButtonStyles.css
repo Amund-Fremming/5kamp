@@ -1,0 +1,15 @@
+.actionbutton__container {
+    border:none;
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: brown;
+    color: wheat;
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: 700;
+}
+

@@ -16,7 +16,7 @@ export interface Player {
 export const EmptyGame: Game = {
   rounds: [],
   roundNumber: 0,
-  numberOfRounds: 10,
+  numberOfRounds: 5,
 };
 
 export enum Screen {

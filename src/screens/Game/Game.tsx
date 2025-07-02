@@ -2,20 +2,20 @@ import { useEffect } from "react";
 import PlayerScore from "../../components/PlayerScore/PlayerScore";
 import { useGameProvider } from "../../context/GameContext";
 import { Round, Screen } from "../../context/types";
+import ActionButton from "../../components/ActionButton/ActionButton";
+import "./gameStyles.css";
+import haffeImage from "../../assets/haffe.png";
+import theoImage from "../../assets/theo.png";
 
 export const Game = () => {
   const { game, setGame, setScreen } = useGameProvider();
 
-  useEffect(() => {
-    // trigger?
-    console.log("TRIOGGERED");
-    console.log("Nr", game.roundNumber);
-  }, [game]);
+  useEffect(() => {}, [game]);
 
   const handleUpdateScore = (playerIndex: number, val: number) => {
     const updatedPlayers = game.rounds[game.roundNumber].players.map(
       (player, index) => {
-        if (playerIndex == index) {
+        if (playerIndex === index) {
           return { ...player, score: player.score + val };
         }
 
@@ -66,27 +66,45 @@ export const Game = () => {
     setScreen(Screen.ScoreBoard);
   };
 
+  const getPlayerSum = (nameToFind: string): number => {
+    var sum = 0;
+    console.log(game);
+    for (var i = 0; i < game.roundNumber; i++) {
+      for (var j = 0; j < game.rounds[i].players.length; j++) {
+        if (game.rounds[i].players[j].name === nameToFind) {
+          sum += game.rounds[i].players[j].score;
+        }
+      }
+    }
+
+    return sum;
+  };
+
   return (
     <div className="container">
-      <h1>Runde {game.roundNumber + 1}</h1>
-      <div className="players-scores">
-        {game.rounds[game.roundNumber].players.map((player, index) => (
-          <PlayerScore
-            handleIncrement={() => handleUpdateScore(index, 1)}
-            handleDecrement={() => handleUpdateScore(index, -1)}
-            player={player}
-            finished={false}
-          />
-        ))}
+      <div className="image-wrapper">
+        <img className="image" src={haffeImage} alt="haffe" />
+        <img className="image" src={theoImage} alt="theo" />
       </div>
+      <h1 className="header">Runde {game.roundNumber + 1}</h1>
+      {game.rounds[game.roundNumber].players.map((player, index) => (
+        <PlayerScore
+          handleIncrement={() => handleUpdateScore(index, 1)}
+          handleDecrement={() => handleUpdateScore(index, -1)}
+          player={player}
+          sum={getPlayerSum(player.name)}
+        />
+      ))}
 
-      <div className="next">
-        {game.roundNumber > 0 && <button onClick={handlePrev}>Forrige</button>}
+      <div className="game__button-wrapper">
         {game.roundNumber < game.numberOfRounds - 1 && (
-          <button onClick={handleNext}>Neste</button>
+          <ActionButton onClick={handleNext} text="Neste" />
         )}
         {game.roundNumber === game.numberOfRounds - 1 && (
-          <button onClick={handleFinished}>Regn ut</button>
+          <ActionButton onClick={handleFinished} text="Scoreboard" />
+        )}
+        {game.roundNumber > 0 && (
+          <ActionButton onClick={handlePrev} text="Forrige" />
         )}
       </div>
     </div>

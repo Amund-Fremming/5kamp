@@ -1,8 +1,109 @@
 .container {
-    background-color: aqua;
+    background-color: wheat;
     margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 5vh;
+    height: 100vh;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: monospace;
+    color: brown;
+}
+
+.round-label {
+    font-size: 25px;
+    color: brown;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.round-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.error {
+    font-size: 18px;
+    color: green;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.round-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px
+}
+
+.round-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 440px;
+    border: none;
+    background-color:beige;
+    font-family: monospace;
+    color: brown;
+    font-weight: 900;
+    font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 100px;
+}
+
+.players {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+
+.add-button {
+    border:none;
+    margin-top: 20px;
+    width: 230px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: brown;
+    color: wheat;
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.start-button {
+    border:none;
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: brown;
+    color: wheat;
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: 700;
 }

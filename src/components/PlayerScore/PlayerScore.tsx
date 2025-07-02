@@ -1,24 +1,36 @@
 import "./playerScoreStyles.css";
 import { Player } from "../../context/types";
+import { useEffect } from "react";
+import { useGameProvider } from "../../context/GameContext";
 
 interface PlayerScoreProps {
   player: Player;
-  finished: boolean;
+  sum: number;
   handleIncrement: () => void;
   handleDecrement: () => void;
 }
 
-export const PlayerScore = (props: PlayerScoreProps) => {
+export const PlayerScore = ({
+  handleDecrement,
+  handleIncrement,
+  player,
+  sum,
+}: PlayerScoreProps) => {
   return (
-    <div className="container">
-      <p>{props.player.name}</p>
-      <p>{props.player.score}</p>
-      {!props.finished && (
-        <div>
-          <button onClick={props.handleDecrement}>-</button>
-          <button onClick={props.handleIncrement}>+</button>
-        </div>
-      )}
+    <div className="playerscore__container">
+      <div className="playerscore__wrapper">
+        <p className="playerscore__p">{player.name}</p>
+        <p className="playerscore__p">({sum})</p>
+      </div>
+      <div className="playerscore__wrapper">
+        <p className="playerscore__p">{player.score}</p>
+        <button className="playerscore__button" onClick={handleDecrement}>
+          -
+        </button>
+        <button className="playerscore__button" onClick={handleIncrement}>
+          +
+        </button>
+      </div>
     </div>
   );
 };

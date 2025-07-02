@@ -1,3 +1,37 @@
-.container {
-    background-color: blueviolet;
+.playerscore__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.playerscore__p {
+    font-size: medium;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.playerscore__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.playerscore__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 440px;
+    border: none;
+    background-color: beige;
+    font-family: monospace;
+    color: brown;
+    font-weight: 900;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

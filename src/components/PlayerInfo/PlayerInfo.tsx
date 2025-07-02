@@ -1,3 +1,5 @@
+import "./playerInfoStyles.css";
+
 interface PlayerInfoProps {
   index: number;
   removeName: () => void;
@@ -6,12 +8,15 @@ interface PlayerInfoProps {
 
 const PlayerInfo = (props: PlayerInfoProps) => {
   return (
-    <div className="container">
+    <div className="playerinfo__container">
       <input
+        className="playerinfo__input"
         placeholder="Navn..."
         onChange={(input) => props.setName(input.target.value, props.index)}
       />
-      <button onClick={props.removeName}>-</button>
+      <button className="playerinfo__button" onClick={props.removeName}>
+        x
+      </button>
     </div>
   );
 };

@@ -1,8 +1,22 @@
-.container {
-    background-color: aqua;
+.game__container {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+
+.game__header {
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: 900;
+}
+
+.game__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

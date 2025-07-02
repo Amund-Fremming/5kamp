@@ -1,0 +1,15 @@
+.scoreboard__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    width: 200px;
+}
+
+.space {
+    padding-bottom: 10px;
+}

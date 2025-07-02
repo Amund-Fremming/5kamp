@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import PlayerScore from "../../components/PlayerScore/PlayerScore";
 import { useGameProvider } from "../../context/GameContext";
 import "./scoreBoardStyles.css";
-import { Player } from "../../context/types";
+import { EmptyGame, Player, Screen } from "../../context/types";
+import ActionButton from "../../components/ActionButton/ActionButton";
+import haffeImage from "../../assets/haffe.png";
+import theoImage from "../../assets/theo.png";
 
 const ScoreBoard = () => {
-  const { game } = useGameProvider();
+  const { game, setGame, setScreen } = useGameProvider();
   const [scores, setScores] = useState<Player[]>();
 
   useEffect(() => {
@@ -30,15 +32,36 @@ const ScoreBoard = () => {
     setScores(scoreArray);
   };
 
+  const handleLobbyPressed = () => {
+    setScreen(Screen.Lobby);
+    setGame(EmptyGame);
+  };
+
   return (
     <div className="container">
-      <h1>ScoreBoard</h1>
-      {scores?.map((player) => (
-        <div>
-          <p>{player.name}</p>
-          <p>{player.score}</p>
-        </div>
-      ))}
+      <div className="image-wrapper">
+        <img className="image" src={haffeImage} alt="haffe" />
+        <img className="image" src={theoImage} alt="theo" />
+      </div>
+      <h1 className="header">ScoreBoard</h1>
+      {scores
+        ?.sort((a, b) => b.score - a.score)
+        ?.map((player, index) => (
+          <div className="scoreboard__wrapper">
+            <p>
+              {index + 1}. {player.name}
+            </p>
+            <p>{player.score}</p>
+          </div>
+        ))}
+
+      <div className="space" />
+
+      <ActionButton onClick={handleLobbyPressed} text="Lobby" />
+      <ActionButton
+        onClick={() => setScreen(Screen.Game)}
+        text="Rediger spill"
+      />
     </div>
   );
 };
