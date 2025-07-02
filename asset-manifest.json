@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/5kamp/static/css/main.f89d44f1.css",
+    "main.js": "/5kamp/static/js/main.e73df16b.js",
+    "static/js/453.ab50adfe.chunk.js": "/5kamp/static/js/453.ab50adfe.chunk.js",
+    "index.html": "/5kamp/index.html",
+    "main.f89d44f1.css.map": "/5kamp/static/css/main.f89d44f1.css.map",
+    "main.e73df16b.js.map": "/5kamp/static/js/main.e73df16b.js.map",
+    "453.ab50adfe.chunk.js.map": "/5kamp/static/js/453.ab50adfe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f89d44f1.css",
+    "static/js/main.e73df16b.js"
+  ]
+}
