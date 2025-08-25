@@ -22,6 +22,8 @@
 }
 
 .playerscore__button {
+    margin-top: 2px;
+    margin-bottom: 2px;
     width: 45px;
     height: 45px;
     border-radius: 440px;

@@ -40,7 +40,7 @@ const Lobby = () => {
   };
 
   const handleAddPlayer = () => {
-    if (players.length === 7) {
+    if (players.length === 15) {
       setError("Kan ikke ha flere enn 7 spillere");
       return;
     }
@@ -72,39 +72,43 @@ const Lobby = () => {
 
   return (
     <div className="container">
-      <div className="image-wrapper">
-        <img className="image" src={haffeImage} alt="haffe" />
-        <img className="image" src={theoImage} alt="theo" />
-      </div>
-      <h1 className="header">5kamp log</h1>
-      <p className="error">{error}</p>
-      <div className="round-wrapper">
-        <label className="round-label">{numRounds} Runder</label>
-        <div className="round-buttons">
-          <button
-            className="round-button"
-            onClick={() => setNumRounds((prev) => (prev === 0 ? 0 : prev - 1))}
-          >
-            -
-          </button>
-          <button
-            className="round-button"
-            onClick={() =>
-              setNumRounds((prev) => (prev === 20 ? 20 : prev + 1))
-            }
-          >
-            +
-          </button>
+      <div className="inner-container">
+        <div className="image-wrapper">
+          <img className="image" src={haffeImage} alt="haffe" />
+          <img className="image" src={theoImage} alt="theo" />
         </div>
-      </div>
-      <div className="players">
-        {players.map((_, index) => (
-          <PlayerInfo
-            setName={handleSetName}
-            removeName={() => handleRemovePlayer(index)}
-            index={index}
-          />
-        ))}
+        <h1 className="header">5kamp log</h1>
+        <p className="error">{error}</p>
+        <div className="round-wrapper">
+          <label className="round-label">{numRounds} Runder</label>
+          <div className="round-buttons">
+            <button
+              className="round-button"
+              onClick={() =>
+                setNumRounds((prev) => (prev === 0 ? 0 : prev - 1))
+              }
+            >
+              -
+            </button>
+            <button
+              className="round-button"
+              onClick={() =>
+                setNumRounds((prev) => (prev === 20 ? 20 : prev + 1))
+              }
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <div className="players">
+          {players.map((_, index) => (
+            <PlayerInfo
+              setName={handleSetName}
+              removeName={() => handleRemovePlayer(index)}
+              index={index}
+            />
+          ))}
+        </div>
       </div>
       <div className="abs-buttons">
         <button className="add-button" onClick={handleAddPlayer}>

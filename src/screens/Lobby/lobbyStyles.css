@@ -1,4 +1,17 @@
+body {
+    background-color: wheat;
+}
+
 .container {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center; 
+}
+
+.inner-container {
     background-color: wheat;
     margin: 0;
     display: flex;
@@ -7,7 +20,6 @@
     flex-direction: column;
     gap: 11px;
     padding-top: 5vh;
-    height: 100vh;
 }
 
 .header {
@@ -115,9 +127,9 @@
 }
 
 .abs-buttons {
-    position: absolute;
     bottom: 35px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-bottom: 10px;
 }
